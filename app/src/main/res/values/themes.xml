@@ -2,15 +2,35 @@
     <!-- Base application theme. -->
     <style name="Theme.Lines" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/yellow</item>
-        <item name="colorPrimaryVariant">@color/yellow</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="signCardFirst">@color/yellow</item>
+        <item name="signCardSecond">@color/blue</item>
+        <item name="signCardThird">@color/white</item>
+        <item name="signCardText">@color/black</item>
+        <item name="signCardTextLine">@color/green</item>
+        <item name="signCardTextSquare">@color/white</item>
+
+        <item name="signFontFamily">@font/default_font</item>
+    </style>
+
+    <style name="Theme.Lines.Orange" parent="Theme.Lines">
+        <item name="signCardFirst">@color/theme_orange_bg</item>
+        <item name="signCardSecond">@color/theme_orange_bg</item>
+        <item name="signCardThird">@color/theme_orange_bg</item>
+        <item name="signCardText">@color/theme_orange_text</item>
+        <item name="signCardTextLine">@color/theme_orange_text</item>
+        <item name="signCardTextSquare">@color/theme_orange_text</item>
+
+        <item name="signFontFamily">@font/orange</item>
+    </style>
+
+    <style name="Theme.Lines.LCD" parent="Theme.Lines">
+        <item name="signCardFirst">@color/theme_lcd_bg</item>
+        <item name="signCardSecond">@color/theme_lcd_bg</item>
+        <item name="signCardThird">@color/theme_lcd_bg</item>
+        <item name="signCardText">@color/theme_lcd_text</item>
+        <item name="signCardTextLine">@color/theme_lcd_text</item>
+        <item name="signCardTextSquare">@color/theme_lcd_text</item>
+
+        <item name="signFontFamily">@font/lcd</item>
     </style>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="signCardFirst" format="color|reference" />
+    <attr name="signCardSecond" format="color|reference" />
+    <attr name="signCardThird" format="color|reference" />
+    <attr name="signCardText" format="color|reference" />
+    <attr name="signCardTextLine" format="color|reference" />
+    <attr name="signCardTextSquare" format="color|reference" />
+    <attr name="signFontFamily" format="reference" />
+</resources>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="blue">#FF2A4F9C</color>
+    <color name="green">#FF18894F</color>
+    <color name="red">#FFD10000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFF1E601</color>
+
+    <color name="theme_orange_bg">#FF1B1D21</color>
+    <color name="theme_orange_text">#FFFF8345</color>
+
+    <color name="theme_lcd_bg">#FF455944</color>
+    <color name="theme_lcd_text">#FF121412</color>
 </resources>

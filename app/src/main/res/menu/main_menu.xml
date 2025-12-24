@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_theme_default"
+        android:title="Default Theme" />
+
+    <item
+        android:id="@+id/action_theme_orange"
+        android:title="Orange Theme" />
+
+    <item
+        android:id="@+id/action_theme_lcd"
+        android:title="Green LCD Theme" />
+
+</menu>
