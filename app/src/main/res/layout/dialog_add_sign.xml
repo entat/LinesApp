@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="?attr/signCardFirst">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Sign"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="?attr/signCardText"
+        android:fontFamily="?attr/signFontFamily"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etLineNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Line Number"
+        android:inputType="number"
+        android:textColor="?attr/signCardText"
+        android:textSize="30sp"
+        android:fontFamily="?attr/signFontFamily"
+        android:textColorHint="?attr/signCardText"/>
+
+    <EditText
+        android:id="@+id/etStationNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Station Number"
+        android:inputType="number"
+        android:textSize="30sp"
+        android:textColor="?attr/signCardText"
+        android:fontFamily="?attr/signFontFamily"
+        android:textColorHint="?attr/signCardText"/>
+
+    <Button
+        android:id="@+id/btnDialogAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textSize="30sp"
+        android:fontFamily="?attr/signFontFamily"
+        android:backgroundTint="?attr/signCardSecond"
+        android:textColor="?attr/signCardText"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

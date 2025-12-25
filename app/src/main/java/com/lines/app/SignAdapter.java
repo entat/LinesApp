@@ -8,9 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder> {
+    public interface OnSignLongClickListener {
+        void onSignLongClick(int position);
+    }
+    private OnSignLongClickListener listener;
     List<SignData> signDataList;
-    public SignAdapter(List<SignData> signDataList) {
+    public SignAdapter(List<SignData> signDataList, OnSignLongClickListener listener) {
         this.signDataList = signDataList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -29,6 +34,7 @@ public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder
     @Override
     public void onBindViewHolder(@NonNull SignViewHolder holder, int position) {
         SignData signData = signDataList.get(position);
+
         holder.blueSquare.setText(signData.LineNumber);
         holder.topWhite.setText(signData.Station);
         holder.row1.setText(signData.Row1);
@@ -36,6 +42,13 @@ public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder
         holder.row3.setText(signData.Row3);
         holder.row4.setText(signData.Row4);
         holder.row5.setText(signData.Row5);
+
+        holder.itemView.setOnLongClickListener(v -> {
+            if (listener != null) {
+                listener.onSignLongClick(position);
+            }
+            return true;
+        });
     }
     public static class SignViewHolder extends RecyclerView.ViewHolder {
 
