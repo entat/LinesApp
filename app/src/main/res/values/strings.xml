@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Lines</string>
+    <string name="plus_character">+</string>
+    <string name="add_new_sign">Add New Sign</string>
+    <string name="line_number">Line Number</string>
+    <string name="station_number">Station Number</string>
+    <string name="add">Add</string>
+    <string name="row_1">row 1</string>
+    <string name="row_2">row 2</string>
+    <string name="row_3">row 3</string>
+    <string name="row_4">row 4</string>
+    <string name="row_5">row 5</string>
+    <string name="_999">999</string>
+    <string name="example_n_no_99999">example \n no. 99999</string>
 </resources>

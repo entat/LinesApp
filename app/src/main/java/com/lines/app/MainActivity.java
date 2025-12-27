@@ -1,11 +1,10 @@
 package com.lines.app;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,37 +20,34 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private List<SignData> signDataList;
     private SignAdapter adapter;
-    private RecyclerView recyclerView;
-
     private static final String PREFS_NAME = "AppPrefs";
     private static final String KEY_THEME = "SelectedTheme_V2";
     private static final String KEY_DATA_LIST = "SignDataList";
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //loadTheme();
+        loadTheme();
         setTheme(R.style.Theme_Lines);
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         Button btnAdd = findViewById(R.id.btnAdd);
-        recyclerView = findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         loadData();
 
-        adapter = new SignAdapter(signDataList, position -> {
-            new AlertDialog.Builder(this)
-                    .setTitle("Sign Remove")
-                    .setMessage("Remove this sign?")
-                    .setPositiveButton("Remove", (dialog, which) -> {
-                        signDataList.remove(position);
-                        saveData();
-                        adapter.notifyDataSetChanged();
-                    })
-                    .setNegativeButton("Cancel", null)
-                    .show();
-        });
+        adapter = new SignAdapter(signDataList, position -> new AlertDialog.Builder(this)
+                .setTitle("Sign Remove")
+                .setMessage("Remove this sign?")
+                .setPositiveButton("Remove", (dialog, which) -> {
+                    signDataList.remove(position);
+                    saveData();
+                    adapter.notifyDataSetChanged();
+                })
+                .setNegativeButton("Cancel", null)
+                .show());
         recyclerView.setAdapter(adapter);
 
         btnAdd.setOnClickListener(v -> {
@@ -87,21 +83,6 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(v.getPaddingLeft(), systemBars.top, v.getPaddingRight(), v.getPaddingBottom() + systemBars.bottom);
             return insets;
         });
-    }
-    private void addSign() {
-        java.util.Random rand = new java.util.Random();
-        int lineNum = rand.nextInt(900) + 100;
-
-        signDataList.add(new SignData(
-                String.valueOf(lineNum),
-                "Station " + (rand.nextInt(5000) + 1000),
-                "Time: 10:00",
-                "Very Busy",
-                "Platform " + (rand.nextInt(5) + 1),
-                "Fast Line",
-                "Have a nice ride"
-        ));
-        saveData();
     }
     private void loadTheme() {
         android.content.SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);

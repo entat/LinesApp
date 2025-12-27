@@ -11,7 +11,7 @@ public class SignAdapter extends RecyclerView.Adapter<SignAdapter.SignViewHolder
     public interface OnSignLongClickListener {
         void onSignLongClick(int position);
     }
-    private OnSignLongClickListener listener;
+    private final OnSignLongClickListener listener;
     List<SignData> signDataList;
     public SignAdapter(List<SignData> signDataList, OnSignLongClickListener listener) {
         this.signDataList = signDataList;
