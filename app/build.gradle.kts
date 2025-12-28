@@ -35,6 +35,7 @@ android {
 
 dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.android.material:material:1.13.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

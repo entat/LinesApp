@@ -1,13 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_account"
-            android:title="Account" />
-        <item
-            android:id="@+id/nav_notifications"
-            android:title="Notifications" />
-        <item
-            android:id="@+id/nav_display"
-            android:title="Display" />
+            android:id="@+id/menu_themes"
+            android:title="Themes" />
     </group>
 </menu>
