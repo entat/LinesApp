@@ -50,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
 
         topAppBar.setNavigationOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
+        topAppBar.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.action_settings) {
+                drawerLayout.openDrawer(GravityCompat.END);
+                return true;
+            }
+            return false;
+        });
 
         navigationView.setNavigationItemSelectedListener(item -> {
             if (item.getItemId() == R.id.menu_themes) {
