@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.Lines" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -10,6 +10,8 @@
         <item name="signCardText">@color/black</item>
         <item name="signCardTextLine">@color/green</item>
         <item name="signCardTextSquare">@color/white</item>
+
+        <item name="signVerticalDivider">@android:color/transparent</item>
 
         <item name="signFontFamily">@font/default_font</item>
     </style>
@@ -24,6 +26,8 @@
         <item name="signCardTextLine">@color/theme_orange_text</item>
         <item name="signCardTextSquare">@color/theme_orange_text</item>
 
+        <item name="signVerticalDivider">@color/theme_orange_text</item>
+
         <item name="signFontFamily">@font/orange</item>
     </style>
 
@@ -36,6 +40,8 @@
         <item name="signCardText">@color/theme_lcd_text</item>
         <item name="signCardTextLine">@color/theme_lcd_text</item>
         <item name="signCardTextSquare">@color/theme_lcd_text</item>
+
+        <item name="signVerticalDivider">@color/theme_lcd_text</item>
 
         <item name="signFontFamily">@font/lcd</item>
     </style>

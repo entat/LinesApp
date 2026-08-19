@@ -20,8 +20,9 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-            app:menu="@menu/top_bar_menu"
-            app:title="My App" />
+            app:navigationIcon="@drawable/ic_app_logo"
+            app:navigationIconTint="@null"
+            app:title="" />
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/main"
@@ -41,7 +42,7 @@
                     android:scrollbars="vertical"
                     tools:listitem="@layout/sign" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnAdd"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
@@ -49,12 +50,14 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/black_border_with_yellow"
-                    android:text="@string/plus_character"
-                    android:textAlignment="center"
-                    android:textColor="?attr/signCardText"
-                    android:textSize="60sp"
-                    app:backgroundTint="@null" />
+                    android:background="@drawable/retro_button_bg"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_add_retro"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="50dp"
+                    app:iconTint="?attr/signCardText"
+                    android:text="" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

@@ -6,5 +6,6 @@
     <attr name="signCardText" format="color|reference" />
     <attr name="signCardTextLine" format="color|reference" />
     <attr name="signCardTextSquare" format="color|reference" />
+    <attr name="signVerticalDivider" format="color|reference" />
     <attr name="signFontFamily" format="reference" />
 </resources>

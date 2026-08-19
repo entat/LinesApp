@@ -3,13 +3,10 @@ package com.lines.app;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -50,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
 
         topAppBar.setNavigationOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
-        topAppBar.setOnMenuItemClickListener(item -> {
-            if (item.getItemId() == R.id.action_settings) {
-                drawerLayout.openDrawer(GravityCompat.END);
-                return true;
-            }
-            return false;
-        });
 
         navigationView.setNavigationItemSelectedListener(item -> {
             if (item.getItemId() == R.id.menu_themes) {
